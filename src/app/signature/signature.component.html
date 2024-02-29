@@ -1,0 +1,22 @@
+
+  <div>
+    <h2>Selected Color of Pen Here:</h2>
+    <app-color-picker (colorChanged)="onColorChanged($event)"></app-color-picker>
+  </div>
+  
+  <div>
+    <canvas #myCanvas (mousedown)="startDrawing($event)" 
+    (mousemove)="draw($event)" 
+    (mouseup)="endDrawing($event)" width="400" height="200"></canvas>
+  </div>
+  <button (click)="openModal()">Download</button>
+  <button (click)="clearCanvas()">Clear Canvas</button>
+
+<app-modal *ngIf="isModalOpen" (closeModalEvent)="closeModal()" [customContent]="modalContent">
+    <h2>Are you sure, you want to download the file?</h2>
+    <h4>Type your filename here: <input type="text" [(ngModel)]="filename" placeholder="Type the filename here"/></h4>
+    
+    <button class="btn-primary" (click)="convertToImg()">Convert To Image</button>
+    <button class="btn-primary" (click)="convertToPdf()">Convert To PDF</button>
+</app-modal>
+ 
