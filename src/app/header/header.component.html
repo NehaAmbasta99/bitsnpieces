@@ -1,2 +1,17 @@
-<p>header works!</p>
-<router-outlet></router-outlet>
+<!-- app.component.html -->
+
+<header>
+    <nav>
+      <ul>
+        <li><a routerLink="/todo" routerLinkActive="active">Todo</a></li>
+        <li><a routerLink="/signature" routerLinkActive="active">Signature</a></li>
+        <li><a routerLink="/restaurants" routerLinkActive="active">Restaurants</a></li>
+        <li><a routerLink="/users" routerLinkActive="active">Users</a></li>
+    </ul>
+    </nav>
+  </header>
+  
+  <main class="container">
+    <router-outlet></router-outlet>
+  </main>
+  

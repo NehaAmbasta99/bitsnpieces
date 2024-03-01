@@ -28,7 +28,9 @@
     "rxjs": "~7.8.0",
     "signature_pad": "^4.0.7",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "~0.14.3",
+    "ajv": "^8.8.2",
+  "ajv-keywords": "^5.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.1.2",

@@ -17,6 +17,9 @@ import { ColorPickerModule, ColorPickerComponent } from 'ngx-color-picker';
 import { ColorPickerComponents } from './color-picker/color-picker.component';
 import { AppModalComponent } from './app-modal/app-modal.component';
 import { HeaderComponent } from './header/header.component';
+import { TodoComponent } from './todo/todo.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { HeaderComponent } from './header/header.component';
     SignatureComponent,
     ColorPickerComponents,
     AppModalComponent,
-    HeaderComponent
+    HeaderComponent,
+    TodoComponent,
+    RestaurantsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

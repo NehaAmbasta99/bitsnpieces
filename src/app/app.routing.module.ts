@@ -1,18 +1,22 @@
+// app.module.ts
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { AuthGuard } from './shared/auth.guard';
+import { TodoComponent } from './todo/todo.component';
 import { SignatureComponent } from './signature/signature.component';
-export const approute: Routes = [
-    {
-        path:'signature', component:SignatureComponent
-    },{
-        path:'', component:AppComponent
-    },
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { UserComponent } from './user/user.component';
+
+const routes: Routes = [
+  { path: 'todo', component: TodoComponent },
+  { path: 'signature', component: SignatureComponent },
+  { path: 'restaurants', component: RestaurantsComponent },
+  { path: 'users', component: UserComponent },
+  { path: '', redirectTo: '/todo', pathMatch: 'full' }, // Redirect to /todo by default
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(approute)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,0 +1,11 @@
+<div>
+<span>Hello, Please Login to explore more!</span>
+<form class="alignCenter" [formGroup]="todoForm" (ngSubmit)="addTodo()">
+  <input (blur)="toggleScale()" [@scale]="buttonState" (click)="toggleScale()" formControlName="title" placeholder="New Todo" />
+  <button type="submit">Add Todo</button>
+</form>
+<div *ngFor="let todo of todos" highlight value="yellow">
+  {{ todo.completed | addCheckbox}}
+  {{ todo.title}}
+</div>
+</div>
